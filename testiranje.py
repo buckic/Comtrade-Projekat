@@ -13,7 +13,7 @@ class Test(unittest.TestCase):
         for podatak in mocked_data.TEST_DATA:
             driver = webdriver.Chrome("chromedriver.exe")
 
-            driver.get("https://comtradeqa.herokuapp.com")
+            driver.get(constants.BASE_URL)
             driver.maximize_window()
 
             time.sleep(2)
@@ -74,7 +74,7 @@ class Test(unittest.TestCase):
         for podatak in mocked_data.TEST_DATA:
             driver = webdriver.Chrome("chromedriver.exe")
 
-            driver.get("https://comtradeqa.herokuapp.com")
+            driver.get(constants.BASE_URL)
             driver.maximize_window()
 
             time.sleep(2)
@@ -102,7 +102,7 @@ class Test(unittest.TestCase):
             self.assertEqual(driver.current_url,f"{constants.BASE_URL}/")
 
     def test_is_site_online(self):
-        response= requests.get(constants.BASE_URL)
+        response= requests.get(constants.BASE_URL,timeout=10)
         self.assertEqual(response.status_code,200)
 
         
