@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "36da28d5-4db5-4592-aa4e-60bee46ba8b3",
+		"name": "Projekat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Loginovanje",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"adamovic07111990@gmail.com\",\r\n    \"password\":\"Adamovic07111990!\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://comtradeqa.herokuapp.com/api/users/login",
+					"protocol": "https",
+					"host": [
+						"comtradeqa",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Post zahtev"
+			},
+			"response": []
+		},
+		{
+			"name": "Registracija",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Aleksandra777\",\r\n    \"password\":\"Aleksandra777!\",\r\n    \"email\":\"Aleksandra777@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://comtradeqa.herokuapp.com/api/users/add",
+					"protocol": "https",
+					"host": [
+						"comtradeqa",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Online Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://comtradeqa.herokuapp.com",
+					"protocol": "https",
+					"host": [
+						"comtradeqa",
+						"herokuapp",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
