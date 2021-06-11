@@ -8,7 +8,7 @@ import locators
 def LoginPageTest(email, password):
     driver = webdriver.Chrome("chromedriver.exe")
 
-    driver.get("https://comtradeqa.herokuapp.com")
+    driver.get(constants.BASE_URL)
     driver.maximize_window()
 
     time.sleep(2)

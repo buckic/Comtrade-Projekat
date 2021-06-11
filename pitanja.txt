@@ -1,0 +1,4 @@
+1. pogledati testiranje.py i da li su potpuni i dobri unit testovi
+2. mozda dodati jos neke unit testove(login losi kredencijali, registracija losa sifra)
+3. organizovati kod, module staviti u pakete
+4. excel bug report

@@ -3,6 +3,7 @@ import time
 import constants
 import locators
 import mocked_data
+import MockedData
 import unittest
 import requests
 
@@ -10,7 +11,7 @@ import requests
 
 class Test(unittest.TestCase):
     def test_login(self):
-        for podatak in mocked_data.TEST_DATA:
+        for podatak in MockedData.getTestData("MOCK_DATA.json")["login"]:
             driver = webdriver.Chrome("chromedriver.exe")
 
             driver.get(constants.BASE_URL)
@@ -41,7 +42,7 @@ class Test(unittest.TestCase):
             self.assertEqual(driver.current_url, f"{constants.BASE_URL}/")
     
     def test_register(self):
-        for podatak in mocked_data.TEST_DATA_REGISTRATION:
+        for podatak in MockedData.getTestData("MOCK_DATA.json")["register"]:
 
             driver = webdriver.Chrome()
             driver.get(constants.BASE_URL)
@@ -71,7 +72,7 @@ class Test(unittest.TestCase):
             self.assertEqual(driver.current_url,f"{constants.BASE_URL}{constants.LOGIN_PAGE}")
 
     def test_logout(self):
-        for podatak in mocked_data.TEST_DATA:
+        for podatak in MockedData.getTestData("MOCK_DATA.json")["login"]:
             driver = webdriver.Chrome("chromedriver.exe")
 
             driver.get(constants.BASE_URL)
