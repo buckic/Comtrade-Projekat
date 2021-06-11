@@ -2,7 +2,6 @@ from selenium import webdriver
 import time
 import constants
 import locators
-import mocked_data
 import MockedData
 import unittest
 import requests
